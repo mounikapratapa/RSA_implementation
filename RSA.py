@@ -1,7 +1,6 @@
 #import miller_rabin_test file 
 from miller_rabin_test import is_prime
 import random
-import numpy as np
 def gcd(a, b):
     while b:
         return gcd(b, a%b)
