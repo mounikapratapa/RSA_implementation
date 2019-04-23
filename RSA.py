@@ -1,3 +1,4 @@
+#import miller_rabin_test file 
 from miller_rabin_test import is_prime
 import random
 import numpy as np
@@ -5,6 +6,7 @@ def gcd(a, b):
     while b:
         return gcd(b, a%b)
     return a
+#extended euclidean algorithm for calculative mod  inverse
 def egcd(a, b):
     if a == 0:
         return (b, 0, 1)
@@ -24,6 +26,8 @@ def best_e(l):
         e = random.randrange(1, l)
         g = gcd(e,l)
     return e
+
+#generate large primes by randomly selecting prime numbers and testing for primality using miller rabin's test
 def generate_prime_candidate(size):
     p = random.getrandbits(size)
     p |= (1 << size - 1) | 1
