@@ -55,9 +55,6 @@ def dec(sk,ct):
     return plain_text
 def main():
     pk, sk = keys()
-    choose_new = input("Do you want to generate new set of public and  secret keys?(y/n):")
-    if (choose_new == 'y'):
-        keys()
     pt = input("Enter the message you want to encrypt:")
     print("Encrypting...")
     ct = enc(pk,pt)
