@@ -7,7 +7,7 @@ def _try_composite(a, d, n, s):
             return False
     return True # n  is definitely composite
  
-def is_prime(n, _precision_for_huge_n=16):
+def is_prime(n, _precision_for_huge_n=1024):
     if n in _known_primes:
         return True
     if any((n % p) == 0 for p in _known_primes) or n in (0, 1):
